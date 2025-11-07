@@ -1,39 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_check_printf.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: feel-idr <feel-idr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/07 16:11:06 by feel-idr          #+#    #+#             */
-/*   Updated: 2025/11/07 16:20:33 by feel-idr         ###   ########.fr       */
+/*   Created: 2025/11/07 16:20:18 by feel-idr          #+#    #+#             */
+/*   Updated: 2025/11/07 16:22:37 by feel-idr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *count, ...)
+int	ft_check_printf(const char *str, va_list ptr)
 {
-	char	*forma;
-	int		i;
-	int		count;
+	int	count;
 	
-	forma = (char *)count;
-	i = 0;
 	count = 0;
-	va_list (ptr);
-	va_start(ptr, forma);
-	while (forma[i])
-	{
-		if (forma[i] != '%')
-			count += ft_print_putchar(forma[i]);
-		else if (forma[i] == %)
-		{
-			i++;
-			count += ft_check_printf(&forma[i], ptr);
-		}
-		i++:
-	}
-	va_end (ptr);
-	return (count);
+	if ()
 }
