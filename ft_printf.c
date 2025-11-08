@@ -6,34 +6,34 @@
 /*   By: feel-idr <feel-idr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 16:11:06 by feel-idr          #+#    #+#             */
-/*   Updated: 2025/11/07 16:20:33 by feel-idr         ###   ########.fr       */
+/*   Updated: 2025/11/08 18:56:21 by feel-idr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *count, ...)
+int	ft_printf(const char *forma, ...)
 {
-	char	*forma;
+	char	*tab;
 	int		i;
 	int		count;
-	
-	forma = (char *)count;
+	va_list	list;
+
+	tab = (char *)forma;
 	i = 0;
 	count = 0;
-	va_list (ptr);
-	va_start(ptr, forma);
-	while (forma[i])
+	va_start(list, tab);
+	while (tab[i])
 	{
-		if (forma[i] != '%')
-			count += ft_print_putchar(forma[i]);
-		else if (forma[i] == %)
+		if (tab[i] != '%')
+			count += ft_ptint_putchar(tab[i]);
+		else if (tab[i] == '%')
 		{
 			i++;
-			count += ft_check_printf(&forma[i], ptr);
+			count += ft_check_print(&tab[i], list);
 		}
-		i++:
+		i++;
 	}
-	va_end (ptr);
+	va_end(list);
 	return (count);
 }
