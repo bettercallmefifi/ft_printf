@@ -22,7 +22,7 @@ int	ft_check_printf(const char *ptr, va_list list)
 	else if (*ptr == 'i' || *ptr == 'd')
 		count += ft_print_putnbr(va_arg(list, int));
 	else if (*ptr == 's')
-		count += ft_print_putstr(va_arg(list, char *), count);
+		count += ft_print_putstr(va_arg(list, char *), 1);
 	else if (*ptr == '%')
 		count += ft_print_putchar('%', 1);
 	else if (*ptr == 'u')

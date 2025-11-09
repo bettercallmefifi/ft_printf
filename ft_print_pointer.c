@@ -14,20 +14,20 @@
 
 static int	ptr_hexa(unsigned long long ptr)
 {
-	char			*base;
-	int count;
+	char	*base;
+	int		count;
 
 	count = 0;
-    base = "0123456789abcdef";
+	base = "0123456789abcdef";
 	if (ptr >= 16)
 		count += ptr_hexa(ptr / 16);
 	count += ft_print_putchar(base[ptr % 16], 1);
-	return count;
+	return (count);
 }
 
-int ft_print_pointer(unsigned long long ptr)
+int	ft_print_pointer(unsigned long long ptr)
 {
 	if (!ptr)
 		return (ft_print_putstr("(nil)", 1));
-    return (ft_print_putstr("0x", 1) + ptr_hexa(ptr));
+	return (ft_print_putstr("0x", 1) + ptr_hexa(ptr));
 }

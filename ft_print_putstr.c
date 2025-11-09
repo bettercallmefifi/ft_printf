@@ -20,10 +20,10 @@ int	ft_print_putstr(char *str, int fd)
 	i = 0;
 	count = 0;
 	if (!str)
-		return (ft_print_putstr("(null)", 1));
+		str = "(null)";
 	while (str[i])
 	{
-		count += ft_print_putchar(str[i], 1);
+		count += ft_print_putchar(str[i], fd);
 		i++;
 	}
 	return (count);
