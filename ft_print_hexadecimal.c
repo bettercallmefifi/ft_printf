@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
+
 int	ft_print_hexadecimal(unsigned long long nbr, int flag)
 {
 	char	*base;

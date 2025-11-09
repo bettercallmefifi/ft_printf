@@ -20,10 +20,11 @@
 # include <stdint.h>
 
 int		ft_printf(const char *format, ...);
-int		ft_print_putchar(int c);
+int		ft_check_printf(const char *ptr, va_list list);
+int		ft_print_putchar(int c, int fd);
 int		ft_print_putstr(char *str, int fd);
-int		ft_print_putnbr(int n);
+int		ft_print_putnbr(int nb);
 int		ft_print_unsigned(unsigned int n);
 int		ft_print_hexadecimal(unsigned long long nbr, int flag);
-int		ft_print_pointer(uintptr_t ptr);
+int		ft_print_pointer(unsigned long long ptr);
 #endif

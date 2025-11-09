@@ -22,15 +22,15 @@ int	ft_printf(const char *forma, ...)
 	tab = (char *)forma;
 	i = 0;
 	count = 0;
-	va_start(list, tab);
+	va_start(list, forma);
 	while (tab[i])
 	{
 		if (tab[i] != '%')
-			count += ft_ptint_putchar(tab[i]);
+			count += ft_print_putchar(tab[i], 1);
 		else if (tab[i] == '%')
 		{
 			i++;
-			count += ft_check_print(&tab[i], list);
+			count += ft_check_printf(&tab[i], list);
 		}
 		i++;
 	}
