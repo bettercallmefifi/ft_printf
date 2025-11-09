@@ -27,7 +27,7 @@ int	ft_printf(const char *forma, ...)
 	{
 		if (tab[i] != '%')
 			count += ft_print_putchar(tab[i], 1);
-		else if (tab[i] == '%')
+		else if (tab[i] == '%' && tab[i + 1])
 		{
 			i++;
 			count += ft_check_printf(&tab[i], list);

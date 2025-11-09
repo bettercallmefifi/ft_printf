@@ -17,7 +17,7 @@ int	len_nb(int nb)
 	int	i;
 
 	i = 0;
-	while (nb > 0)
+	while (nb)
 	{
 		nb = nb / 10;
 		i++;

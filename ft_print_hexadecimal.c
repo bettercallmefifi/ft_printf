@@ -21,7 +21,7 @@ int	ft_print_hexadecimal(unsigned long long nbr, int flag)
 	if (flag)
 		base = "0123456789ABCDEF";
 	else
-		base = "123456789abcdef";
+		base = "0123456789abcdef";
 	if (nbr >= 16)
 		count += ft_print_hexadecimal(nbr / 16, flag);
 	count += ft_print_putchar(base[nbr % 16], 1);
